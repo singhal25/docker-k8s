@@ -61,4 +61,9 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         
     - name: Push to DockerHub
-      run: docker push ayush2023oct/ayuapp       
+      run: docker push ayush2023oct/ayuapp  
+      
+    - name: ZAP Scan
+      uses: zaproxy/action-full-scan@v0.7.0
+      with:
+       target: 'https://www.zaproxy.org/'
