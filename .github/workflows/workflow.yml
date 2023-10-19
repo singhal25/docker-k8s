@@ -21,6 +21,10 @@ jobs:
 #        VALIDATE_ALL_CODEBASE: true
 #        GITHUB_TOKEN: ${{ secrets.VILAS_GITHUB_TOKEN }}
 
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: java
     - name: Set up Java
       uses: actions/setup-java@v3
       with:
